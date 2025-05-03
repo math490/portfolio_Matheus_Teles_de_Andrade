@@ -1,0 +1,436 @@
+/* Variáveis Globais */
+
+:root {
+    --font-family: "Abril Fatface", serif;
+    --font-family-text: "Averia Serif Libre", serif;
+    --highlight-color: #d89617;
+    --background-color: #1D1D1F;
+    --text-color: #f0f0f0;
+    --border-color: #111213;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --header-footer-bg: #1d1e20;
+    --box-shadow: 5px 0 5px 5px var(--shadow-color);
+    --transition-duration: 0.3s;
+}
+
+/* Reset e Estilos Globais */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-text);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--highlight-color);
+}
+
+.header h2 {
+    font-size: 2em;
+    color: var(--text-color);
+}
+
+p, section p {
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    margin: 1px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Containers */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.cabecalho .container {
+    gap: 0;
+    justify-content: start;
+}
+
+.container-logo, .container-menu {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-logo {
+    justify-content: start;
+}
+
+.container-titulo {
+    width: 500px;
+}
+
+.container-menu {
+    justify-content: end;
+}
+
+.container .imagem {
+    height: 10em;
+    border-radius: 5px;
+    border: var(--border-color) double 5px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: transform var(--transition-duration) ease;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.container .imagem:hover {
+    transform: scale(1.23);
+    box-shadow: 0 2px 8px rgba(170, 170, 170, 0.473);
+}
+
+.img-section {
+    border: var(--border-color) solid 2px;
+}
+
+.container .logo img {
+    height: 10em;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.texto .paragrafo {
+    text-indent: 2%;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 800;
+    font-family: "Averia Serif Libre", serif;
+}
+
+.texto i {
+    font-weight: 800;
+    font-family: "Averia Serif Libre", serif;
+}
+
+.texto b {
+    font-weight: bold;
+    font-family: var(--font-family);
+    color: var(--highlight-color);
+}
+
+b {
+    font-weight: bold;
+    font-family: var(--font-family);
+}
+
+.paragrafo  ul {
+    margin-left: 58px;
+    margin-bottom: 20px;
+}
+
+.media-imagem {
+    height: 5em;
+    border-radius: 50%;
+}
+
+.media-imagem:hover {
+    box-shadow: 0 2px 8px rgba(170, 170, 170, 0.473);
+}
+
+a .media-imagem {
+    margin: 0;
+}
+
+.paragrafo ul li {
+    font-weight: 800;
+    font-family: "Averia Serif Libre", serif;
+}
+
+header {
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+    padding: 30px 0;
+    animation: slideDown 1s ease-out;
+    z-index: 10;
+    background-color: var(--header-footer-bg);
+}
+
+#background1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/pexels-pixabay-270366.jpg);
+    height: 300px;
+    background-size: cover;
+    z-index: -1;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+#background2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/capa-de-fundo.webp);
+    height: 300px;
+    background-size: cover;
+    z-index: -1;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+#background3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/por-sol.gif);
+    height: 300px;
+    background-size: 100% 170%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+#background4 {
+    background-image: linear-gradient(rgba(190, 190, 190, 0.2), rgba(0, 0, 0, 0.3)), url(img/socialmedia.webp);
+    height: 200px;
+    z-index: -1;
+    background-size: 600px 400px;
+    background-position: 50% 45%;
+    background-repeat: no-repeat;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+#antes-rodape {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background-color: var(--border-color);
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+}
+
+/* Navegação */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: var(--shadow-color);
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seções */
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    overflow: hidden;
+    animation: fadeIn 2s ease;
+}
+
+div {
+    overflow: hidden;
+}
+
+section img {
+    margin: 20px;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section img {
+    margin: 20px;
+}
+
+section ul {
+    list-style: disc;
+}
+
+section ul li {
+    margin-bottom: 5px;
+}
+
+section ul li a:hover {
+    text-decoration: underline;
+}
+
+.titulos {
+    text-align: center;
+    padding: 0;
+}
+
+.tit {
+    padding: 0;
+    margin: 0;
+}
+
+section h2 {
+    margin: 25px 0 10px;
+    color: var(--highlight-color);
+}
+
+.conteudo {
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+}
+
+.rodape {
+    background-color: var(--header-footer-bg);
+    color: #fff;
+    text-align: justify;
+    padding: 20px 0;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+/* Responsividade */
+
+@media (max-width: 1520px) {
+    .img-section .container {
+        padding: 10px;
+        gap: 0.5%;
+    }
+
+    .container-logo, .container-menu {
+        width: 190px;
+    }
+
+    .container .imagem {
+        height: 8em;
+        margin: 10px;
+    }
+
+    header, footer {
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 820px) {
+    .img-section .container {
+        padding: 10px;
+        gap: 0.5%;
+        margin: 10px;
+    }
+
+    .container-titulo {
+        width: 200em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .header h2 {
+        font-size: 1.8em;
+    } 
+
+    .container-logo, .container-menu {
+        visibility: hidden;
+    }
+
+    .container .imagem {
+        height: 5em;
+    }
+
+    header, footer {
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #background4 {
+        background-size: 500px 300px;
+    }
+
+    .texto p {
+        text-indent: 0;
+        font-weight: lighter;
+    }
+
+    .texto {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .media-imagem {
+        height: 3em;
+    }
+
+    a .media-imagem {
+        margin: 10px;
+    }
+}
+
+/* Animações */
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
