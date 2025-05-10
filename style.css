@@ -5,12 +5,16 @@
     --font-family-text: "Averia Serif Libre", serif;
     --highlight-color: #d89617;
     --background-color: #1D1D1F;
+    --background-color-media: #1D1D1F;
     --text-color: #f0f0f0;
+    --titulo-color: #f0f0f0;
     --border-color: #111213;
     --shadow-color: rgba(0, 0, 0, 0.5);
     --header-footer-bg: #1d1e20;
     --box-shadow: 5px 0 5px 5px var(--shadow-color);
+    --box-shadow-hover: 0 2px 8px rgba(170, 170, 170, 0.473);
     --transition-duration: 0.3s;
+    --titulo-font-size: 2em;
 }
 
 /* Reset e Estilos Globais */
@@ -40,8 +44,8 @@ h1 {
 }
 
 .header h2 {
-    font-size: 2em;
-    color: var(--text-color);
+    font-size: var(--titulo-font-size);
+    color: var(--titulo-color);
 }
 
 p, section p {
@@ -71,6 +75,11 @@ a:hover {
 .cabecalho .container {
     gap: 0;
     justify-content: start;
+}
+
+#perfis .img-section #medias {
+    background-color: var(--background-color-media);
+    padding-top: 8px;
 }
 
 .container-logo, .container-menu {
@@ -105,7 +114,7 @@ a:hover {
 
 .container .imagem:hover {
     transform: scale(1.23);
-    box-shadow: 0 2px 8px rgba(170, 170, 170, 0.473);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .img-section {
@@ -138,12 +147,12 @@ a:hover {
     justify-content: center;
     flex-direction: column;
     font-weight: 800;
-    font-family: "Averia Serif Libre", serif;
+    font-family: var(--font-family-text);
 }
 
 .texto i {
     font-weight: 800;
-    font-family: "Averia Serif Libre", serif;
+    font-family: var(--font-family-text);
 }
 
 .texto b {
@@ -164,11 +173,11 @@ b {
 
 .media-imagem {
     height: 5em;
-    border-radius: 50%;
+    border-radius: 60%;
 }
 
 .media-imagem:hover {
-    box-shadow: 0 2px 8px rgba(170, 170, 170, 0.473);
+    box-shadow: var(--box-shadow-hover);
 }
 
 a .media-imagem {
@@ -177,7 +186,7 @@ a .media-imagem {
 
 .paragrafo ul li {
     font-weight: 800;
-    font-family: "Averia Serif Libre", serif;
+    font-family: var(--font-family-text);
 }
 
 header {
@@ -323,7 +332,7 @@ section h2 {
 
 .rodape {
     background-color: var(--header-footer-bg);
-    color: #fff;
+    color: var(--font-family-text);
     text-align: justify;
     padding: 20px 0;
     box-shadow: var(--box-shadow);
@@ -379,8 +388,12 @@ section h2 {
         font-size: 2em;
     }
 
+    body {
+        --titulo-font-size: 1.7em;
+    }
+
     .header h2 {
-        font-size: 1.7em;
+        font-size: var(--titulo-font-size);
     } 
 
     .container-logo, .container-menu {
@@ -434,3 +447,58 @@ section h2 {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* Temas de Cores */
+
+.theme-button {
+    position: fixed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--highlight-color);
+      border: none;
+      border-radius: 4px 0 0 4px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .theme-button:hover {
+    opacity: 0.9;
+  }
+
+  body.light {
+    --background-color: white;
+    --text-color: black;
+    --titulo-color: white;
+    --highlight-color: #007bff;
+    --header-footer-bg: #2e2e30;
+    --background-color-media: white;
+    --box-shadow-hover: 0 2px 8px var(--highlight-color);
+  }
+
+  body.hacker {
+    --background-color: #0f0f0f;
+    --text-color: #33ff33;
+    --titulo-color: var(--highlight-color);
+    --highlight-color: #00ff00;
+    --font-family: 'Courier New', monospace;
+    --font-family-text: 'Consolas', monospace;
+    --header-footer-bg: #0f0f0f;
+    --box-shadow-hover: 0 2px 8px var(--highlight-color);
+    --titulo-font-size: 1.6em;
+  }
+
+  body.win98 {
+    --background-color: #C0C0C0;
+    --text-color: black;
+    --highlight-color: #008080;
+    --box-shadow-hover: 0 2px 8px var(--highlight-color);
+    --background-color-media: #C0C0C0;
+    --header-footer-bg: #A0A0A0;
+    --font-family: "Jersey 25", sans-serif;
+    --font-family-text: "Tiny5", sans-serif;
+  }

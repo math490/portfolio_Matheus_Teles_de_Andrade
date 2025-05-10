@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="img/icon.webp" type="image/x-icon">
     <title>Portfólio</title>
 </head>
@@ -45,6 +48,10 @@
             </div>
     </header>
     <main>
+
+        <button class="theme-button" id="themeToggle" title="Tema atual: padrão do site">
+            <span class="material-icons">lightbulb</span>
+        </button>
 
         <div id="background1"></div>
 
@@ -150,7 +157,7 @@
                     <img id="img1" class="imagem" src="img/math-primeiro.webp" alt="Math Hytale" title="Math - Hytale">
                     <img id="img2" class="imagem" src="img/ghibli-eu.webp" alt="Matheus Teles de Andrade" title="Eu - Ghibli">
                 </div>
-                <div class="container">
+                <div class="container" id="medias">
                     <a href="https://github.com/math490" target="_blank">
                         <img src="img/github.webp" class="media-imagem" alt="github" title="GitHub">
                     </a>
@@ -190,6 +197,35 @@
                 &copy; Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script>
+        const themes = ['default', 'light', 'hacker', 'win98'];
+        let currentThemeIndex = 0;
+    
+        function setTheme(theme) {
+          document.body.className = theme === 'default' ? '' : theme;
+          const title = {
+            'default': 'Tema atual: padrão do site',
+            'light': 'Tema atual: claro',
+            'hacker': 'Tema atual: hacker',
+            'win98': 'Tema atual: Windows 98'
+          };
+          document.getElementById('themeToggle').title = title[theme];
+        }
+    
+        function detectSystemTheme() {
+          return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'default';
+        }
+    
+        // Inicializa com tema do sistema
+        const initialTheme = detectSystemTheme();
+        currentThemeIndex = themes.indexOf(initialTheme);
+        setTheme(themes[currentThemeIndex]);
+    
+        document.getElementById('themeToggle').addEventListener('click', () => {
+          currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+          setTheme(themes[currentThemeIndex]);
+        });
+      </script>
 </body>
 
 </html>
