@@ -332,7 +332,7 @@ section h2 {
 
 .rodape {
     background-color: var(--header-footer-bg);
-    color: var(--font-family-text);
+    color: var(--titulo-color);
     text-align: justify;
     padding: 20px 0;
     box-shadow: var(--box-shadow);
@@ -496,6 +496,7 @@ section h2 {
     --background-color: #C0C0C0;
     --text-color: black;
     --highlight-color: #008080;
+    --titulo-color: rgba(0, 0, 0, 0.350);
     --box-shadow-hover: 0 2px 8px var(--highlight-color);
     --background-color-media: #C0C0C0;
     --header-footer-bg: #A0A0A0;
