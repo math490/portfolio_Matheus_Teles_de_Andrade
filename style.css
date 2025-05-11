@@ -371,6 +371,10 @@ section h2 {
         display: block;
         margin-bottom: 10px;
     }
+
+    iframe {
+        display: none;
+    }
 }
 
 @media (max-width: 820px) {
