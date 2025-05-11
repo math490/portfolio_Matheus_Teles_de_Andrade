@@ -178,7 +178,7 @@
 
             <section class="texto">
                 <div class="paragrafo">
-                    <p> Me siga no GitHub de preferência (<i>o link está logo acima</i>), eu não uso muito redes sociais, sou mais ativo no Discord e no WhatsApp... A propósito meu id no Discord é: mathobracodireito. Coloquei o LinkedIn ali porque achei importante. </p>
+                    <p> Me siga no GitHub de preferência (<i>o link está logo acima</i>), eu não uso muito redes sociais, sou mais ativo no Discord e no WhatsApp... A propósito meu id no Discord é: mathobracodireito. Coloquei o LinkedIn ali porque achei importante. Abaixo está incorporado o jogo Dinogame do chrome, o código de origem está no site MiniJogos/MiniPlay, tanto o "More Dino Games" quanto o "MiniJogos", se pressionados, abrirão a página do site. E por fim, a imagem abaixo descreve o momento em que o dinossauro finalmente chega ao seu destino.</p>
                 </div>
             </section>
 
@@ -188,6 +188,7 @@
 
     <div id="antes-rodape">
         <div id="background4"></div>
+        <iframe src='https://www.minijogos.com.br/embed/chrome-dino' frameborder='0' allowfullscreen></iframe>
     </div>
 
     <footer>
@@ -216,7 +217,7 @@
           return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'default';
         }
     
-        // Inicializa com tema do sistema
+        // Inicializa com tema default
         const initialTheme = detectSystemTheme();
         currentThemeIndex = themes.indexOf(initialTheme);
         setTheme(themes[currentThemeIndex]);

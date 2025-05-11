@@ -503,3 +503,10 @@ section h2 {
     --font-family: "Jersey 25", sans-serif;
     --font-family-text: "Tiny5", sans-serif;
   }
+
+  /* Jogo do Dinossauro */
+
+  iframe {
+    width: 100%;
+    height: 300px;
+}
