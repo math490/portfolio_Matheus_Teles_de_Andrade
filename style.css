@@ -68,13 +68,18 @@ a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 5%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-width: 50%;
 }
 
 .cabecalho .container {
     gap: 0;
     justify-content: start;
+}
+
+#perfis .img-section {
+    flex-direction: column;
 }
 
 #perfis .img-section #medias {
@@ -119,6 +124,10 @@ a:hover {
 
 .img-section {
     border: var(--border-color) solid 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .container .logo img {
@@ -201,6 +210,10 @@ header {
     background-color: var(--header-footer-bg);
 }
 
+header .container {
+    flex-wrap: nowrap;
+}
+
 #background1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/pexels-pixabay-270366.jpg);
     height: 300px;
@@ -211,9 +224,10 @@ header {
 }
 
 #background2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/capa-de-fundo.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/hobbies.jpg);
     height: 300px;
-    background-size: cover;
+    background-size: 100% 170%;
+    background-repeat: no-repeat;
     z-index: -1;
     margin-top: 6px;
     margin-bottom: 6px;
@@ -225,17 +239,6 @@ header {
     background-size: 100% 170%;
     background-repeat: no-repeat;
     z-index: -1;
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-
-#background4 {
-    background-image: linear-gradient(rgba(190, 190, 190, 0.2), rgba(0, 0, 0, 0.3)), url(img/socialmedia.webp);
-    height: 200px;
-    z-index: -1;
-    background-size: 600px 400px;
-    background-position: 50% 45%;
-    background-repeat: no-repeat;
     margin-top: 6px;
     margin-bottom: 6px;
 }
@@ -333,10 +336,11 @@ section h2 {
 .rodape {
     background-color: var(--header-footer-bg);
     color: var(--titulo-color);
-    text-align: justify;
+    text-align: center;
     padding: 20px 0;
     box-shadow: var(--box-shadow);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px;
@@ -507,10 +511,3 @@ section h2 {
     --font-family: "Jersey 25", sans-serif;
     --font-family-text: "Tiny5", sans-serif;
   }
-
-  /* Jogo do Dinossauro */
-
-  iframe {
-    width: 100%;
-    height: 300px;
-}
